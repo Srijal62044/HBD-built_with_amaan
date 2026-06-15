@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday — built_with_amaan 🎉</title>
+  <meta name="description" content="A premium birthday tribute for Instagram creator & coder built_with_amaan" />
+  <meta property="og:title" content="Happy Birthday built_with_amaan 🎉" />
+  <meta property="og:description" content="Celebrating the creativity, dedication, and inspiration you bring to the coding community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ LOADING SCREEN ═══════════════════════ -->
+  <div id="loader">
+    <div class="loader-terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-title">terminal — bash</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="prompt">amaan@birthday:~$</span>
+          <span class="terminal-cmd" id="cmd1"></span>
+        </div>
+        <div class="terminal-line hidden" id="line2">
+          <span class="prompt">amaan@birthday:~$</span>
+          <span class="terminal-cmd" id="cmd2"></span>
+        </div>
+        <div class="terminal-line hidden" id="line3">
+          <span class="prompt">amaan@birthday:~$</span>
+          <span class="terminal-cmd" id="cmd3"></span>
+        </div>
+        <div class="terminal-line hidden" id="line4">
+          <span class="prompt" style="color:#a855f7;">✓</span>
+          <span class="terminal-cmd" id="cmd4" style="color:#22d3ee;"></span>
+        </div>
+      </div>
+      <div class="loader-progress-wrap">
+        <div class="loader-progress-bar" id="progressBar"></div>
+      </div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CURSOR GLOW ═══════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════════════════════ BG CANVAS ═══════════════════════ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ═══════════════════════ FLOATING CODE SYMBOLS ═══════════════════════ -->
+  <div class="floating-symbols" id="floatingSymbols"></div>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <span class="nav-logo">built_with_amaan</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#wishes">Wishes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="balloons" id="balloons"></div>
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-badge">🎂 June 15, 2026</div>
+      <h1 class="hero-title">
+        <span class="hero-happy">Happy Birthday</span>
+        <span class="hero-name gradient-text">built_with_amaan</span>
+        <span class="hero-emoji">🎉</span>
+      </h1>
+
+      <div class="hero-typing-wrap">
+        <span class="hero-typing-prefix">He is a </span>
+        <span class="hero-typing" id="heroTyping"></span>
+        <span class="hero-cursor">|</span>
+      </div>
+
+      <p class="hero-message">
+        Today we celebrate not only your birthday but also the creativity,
+        dedication, and inspiration you bring to the coding community.
+      </p>
+
+      <a href="#about" class="cta-btn">
+        <span>Explore Birthday Tribute</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-tag">About</div>
+      <h2 class="section-title">The <span class="gradient-text">Person</span> Behind the Code</h2>
+
+      <div class="about-card glass-card reveal">
+        <div class="about-particles" id="aboutParticles"></div>
+
+        <div class="profile-avatar-wrap">
+          <!--
+            PROFILE_PHOTO placeholder:
+            Replace the .avatar-initials div with an <img> tag:
+            <img src="PROFILE_PHOTO" alt="built_with_amaan" class="avatar-img" />
+          -->
+          <div class="profile-avatar">
+            <div class="avatar-initials">A</div>
+          </div>
+          <div class="avatar-ring"></div>
+          <div class="avatar-ring avatar-ring-2"></div>
+        </div>
+
+        <div class="about-info">
+          <h3 class="about-name">built_with_amaan</h3>
+          <div class="about-role">
+            <span class="role-dot"></span>
+            Coder &amp; Content Creator
+          </div>
+          <p class="about-bio">
+            "Transforming ideas into reality through code and creativity."
+          </p>
+          <p class="about-bio-sub">
+            AI tools &amp; future trends ⚡ — Where tech meets creativity 💻<br />
+            Future is here. ctrl + Alt + create.
+          </p>
+          <div class="about-tags">
+            <span class="tag">#AI</span>
+            <span class="tag">#WebDev</span>
+            <span class="tag">#Content</span>
+            <span class="tag">#Innovation</span>
+            <span class="tag">#Creator</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ INSTAGRAM ═══════════════════════ -->
+  <section class="section" id="instagram">
+    <div class="section-inner">
+      <div class="section-tag">Social</div>
+      <h2 class="section-title"><span class="gradient-text">Instagram</span> Showcase</h2>
+
+      <div class="insta-layout">
+        <!-- Phone mockup -->
+        <div class="phone-wrap reveal">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status-bar">
+                <span>9:41</span>
+                <span>⚡ 100%</span>
+              </div>
+              <div class="phone-content">
+                <!--
+                  INSTAGRAM_SCREENSHOT placeholder:
+                  The image below uses the provided screenshot.
+                  Replace src with your own screenshot URL if needed.
+                -->
+                <img
+                  src="/instagram-screenshot.png"
+                  alt="@built_with_amaan Instagram profile"
+                  class="phone-insta-img"
+                />
+              </div>
+            </div>
+            <div class="phone-home-bar"></div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+
+        <!-- Stats & CTA -->
+        <div class="insta-right reveal">
+          <div class="insta-handle">@built_with_amaan</div>
+          <p class="insta-desc">
+            AI tools and future trends ⚡ Where tech meets creativity 💻<br />
+            Future is here. ctrl + Alt + create.
+          </p>
+
+          <div class="insta-stats">
+            <div class="stat-card">
+              <div class="stat-num" data-target="27">0</div>
+              <div class="stat-label">Followers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-target="13">0</div>
+              <div class="stat-label">Posts</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-target="23">0</div>
+              <div class="stat-label">Following</div>
+            </div>
+          </div>
+
+          <!--
+            INSTAGRAM_LINK placeholder:
+            Replace href with the actual Instagram profile URL.
+          -->
+          <a
+            href="https://www.instagram.com/built_with_amaan"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="insta-btn"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            Follow on Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CODING JOURNEY ═══════════════════════ -->
+  <section class="section" id="journey">
+    <div class="section-inner">
+      <div class="section-tag">Timeline</div>
+      <h2 class="section-title">Coding <span class="gradient-text">Journey</span></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"><span>01</span></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-icon">💡</div>
+            <h3>Started Learning Code</h3>
+            <p>Every great journey begins with curiosity. You picked up your first editor, typed your first line, and never looked back.</p>
+            <div class="tl-tag">The Beginning</div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"><span>02</span></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-icon">🚀</div>
+            <h3>Built Amazing Projects</h3>
+            <p>From ideas to reality — you transformed blank screens into functional, beautiful creations that solved real problems.</p>
+            <div class="tl-tag">Creation Phase</div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"><span>03</span></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-icon">📱</div>
+            <h3>Created Content</h3>
+            <p>You didn't just code — you shared it. You showed the world how AI tools meet creativity, building a community along the way.</p>
+            <div class="tl-tag">Content Era</div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"><span>04</span></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-icon">✨</div>
+            <h3>Inspired Developers</h3>
+            <p>Your content reached people who had no idea where to start. You became the spark that lit their coding journey.</p>
+            <div class="tl-tag">Impact Phase</div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"><span>05</span></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-icon">🏆</div>
+            <h3>Future Success Ahead</h3>
+            <p>The best is yet to come. Bigger projects, wider reach, deeper impact — the world is waiting for what you'll build next.</p>
+            <div class="tl-tag">Coming Soon</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="section-tag">Expertise</div>
+      <h2 class="section-title">Skills &amp; <span class="gradient-text">Superpowers</span></h2>
+
+      <div class="skills-grid">
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">🌐</span>
+            <span class="skill-name">HTML</span>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">🎨</span>
+            <span class="skill-name">CSS</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">⚡</span>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">🐍</span>
+            <span class="skill-name">Python</span>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="78"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">🧩</span>
+            <span class="skill-name">Problem Solving</span>
+            <span class="skill-pct">96%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="96"></div></div>
+        </div>
+        <div class="skill-card glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-icon">💡</span>
+            <span class="skill-name">Creativity</span>
+            <span class="skill-pct">99%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="99"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ WISH WALL ═══════════════════════ -->
+  <section class="section" id="wishes">
+    <div class="section-inner">
+      <div class="section-tag">Wishes</div>
+      <h2 class="section-title">Birthday <span class="gradient-text">Wish Wall</span></h2>
+
+      <div class="wishes-grid">
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"May your code always compile on the first try — and your bugs write themselves."</p>
+          <div class="wish-from">— From the Internet</div>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"May your creativity never run out, and your caffeine never wear off."</p>
+          <div class="wish-from">— The Dev Community</div>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"Keep building, creating, and inspiring — the world needs more minds like yours."</p>
+          <div class="wish-from">— Your Followers</div>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"Wishing you success, happiness, and endless innovation on this special day."</p>
+          <div class="wish-from">— Fellow Creators</div>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"ctrl + Alt + Create — may this year be your greatest build yet."</p>
+          <div class="wish-from">— The Tech World</div>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-stars">★★★★★</div>
+          <p>"You prove that AI tools and human creativity are unstoppable together. Happy Birthday!"</p>
+          <div class="wish-from">— The Future</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SPECIAL MESSAGE ═══════════════════════ -->
+  <section class="section" id="message">
+    <div class="section-inner">
+      <div class="section-tag">A Special Note</div>
+      <h2 class="section-title">From the <span class="gradient-text">Heart</span></h2>
+
+      <div class="special-card glass-card reveal">
+        <div class="special-quote-mark">"</div>
+        <div class="special-salute">Dear Amaan,</div>
+        <p class="special-body">
+          Your passion for coding and creating content continues to inspire people every single day.
+          You are living proof that technology and creativity are two sides of the same coin —
+          and you wield both with a rare elegance.
+        </p>
+        <p class="special-body">
+          May this year bring <span class="highlight">exciting opportunities</span>,
+          <span class="highlight">amazing projects</span>,
+          <span class="highlight">incredible achievements</span>,
+          and <span class="highlight">unforgettable memories</span>.
+        </p>
+        <div class="special-lines">
+          <div class="special-line"><span class="sl-arrow">→</span> Keep building.</div>
+          <div class="special-line"><span class="sl-arrow">→</span> Keep creating.</div>
+          <div class="special-line"><span class="sl-arrow">→</span> Keep inspiring.</div>
+        </div>
+        <div class="special-sign">
+          Happy Birthday 🎂✨<br />
+          <span class="special-sub">— Built with love, for built_with_amaan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CELEBRATION FINALE ═══════════════════════ -->
+  <section class="celebration" id="celebration">
+    <canvas id="fireworksCanvas"></canvas>
+    <div class="celebration-content">
+      <div class="cel-top-emoji">🎉</div>
+      <h2 class="cel-title gradient-text">Happy Birthday</h2>
+      <h1 class="cel-name">BUILT_WITH_AMAAN</h1>
+      <div class="cel-bottom-emoji">🎂</div>
+      <p class="cel-subtitle">May today be the beginning of your greatest chapter yet.</p>
+      <div class="cel-sparks" id="celSparks"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-heart">Made with <span class="heart-icon">❤️</span> for <strong>built_with_amaan</strong></div>
+      <div class="footer-follow">
+        <span>Follow:</span>
+        <a href="https://www.instagram.com/built_with_amaan" target="_blank" rel="noopener noreferrer">@built_with_amaan</a>
+      </div>
+      <div class="footer-copy">© 2026 — Happy Birthday Amaan 🎉</div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
